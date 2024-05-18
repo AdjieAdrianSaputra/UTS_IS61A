@@ -24,33 +24,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @forelse ($brg as $item)
                                         <tr>
-                                            <td>1</td>
-                                            <td>Kursi Lipat</td>
-                                            <td>15,000</td>
-                                            <td>
-                                                <a href="#" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                                            </td>
+                                            <td>{{$nomor++}}</td>
+                                            <td>{{$item->nama_barang}}</td>
+                                            <td>{{$item->tarif}}</td>
+                                            <td><a href="#" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
+                                            <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Meja Lipat</td>
-                                            <td>15,000</td>
-                                            <td>
-                                                <a href="#" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>                                                                               
-                                            <td>Tenda</td>
-                                            <td>80,000</td>
-                                            <td>
-                                                <a href="#" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                                            </td>
-                                        </tr>                                       
+                                    </tr>                                        
+                                    @empty
+
+                                    @endforelse                                       
                                     </tbody>
                                 </table>
                             </div>

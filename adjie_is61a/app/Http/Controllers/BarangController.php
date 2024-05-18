@@ -12,7 +12,9 @@ class BarangController extends Controller
      */
     public function index()
     {
-        return view('barang.index');
+        $nomor = 1;
+        $brg = Barang::all(); //eloquent ORM
+        return view('barang.index',compact('nomor','brg'));
     }
 
     /**
@@ -28,10 +30,10 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        $cus = new Barang;
-        $cus->nama_barang = $request->nama_barang;
-        $cus->tarif = $request->tarif;
-        $cus->save();
+        $brg = new Barang;
+        $brg->nama_barang = $request->nama_barang;
+        $brg->tarif = $request->tarif;
+        $brg->save();
 
         return redirect('/barang/');
     }
