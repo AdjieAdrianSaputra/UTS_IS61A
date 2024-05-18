@@ -51,7 +51,8 @@ class BarangController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $brg = Barang::find($id);
+        return view('barang.edit',compact('brg'));
     }
 
     /**
@@ -59,7 +60,12 @@ class BarangController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $brg = Barang::find($id);
+        $brg->nama_barang = $request->nama_barang;
+        $brg->tarif = $request->tarif;
+        $brg->save();
+
+        return redirect ('/barang/');
     }
 
     /**
