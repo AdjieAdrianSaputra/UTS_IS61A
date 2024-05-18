@@ -27,3 +27,4 @@ Route::get('/barang/form/', [BarangController::class, 'create']);
 Route::post('/barang/store/', [BarangController::class, 'store']);
 Route::get('/barang/edit/{id}', [BarangController::class, 'edit']);
 Route::put('/barang/{id}', [BarangController::class, 'update']);
+Route::delete('/barang/{id}', [BarangController::class, 'destroy']);
