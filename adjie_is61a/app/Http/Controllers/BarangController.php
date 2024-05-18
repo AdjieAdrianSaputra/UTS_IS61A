@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\barang;
 
 class BarangController extends Controller
 {
@@ -27,7 +28,12 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cus = new Barang;
+        $cus->nama_barang = $request->nama_barang;
+        $cus->tarif = $request->tarif;
+        $cus->save();
+
+        return redirect('/barang/');
     }
 
     /**
