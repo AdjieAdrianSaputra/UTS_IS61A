@@ -25,3 +25,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/barang/', [BarangController::class, 'index']);
 Route::get('/barang/form/', [BarangController::class, 'create']);
 Route::post('/barang/store/', [BarangController::class, 'store']);
+Route::get('/barang/edit/{id}', [BarangController::class, 'edit']);
+Route::put('/barang/{id}', [BarangController::class, 'update']);
