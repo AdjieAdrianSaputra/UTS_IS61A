@@ -7,10 +7,12 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Data Barang</h6>
                         </div>
-                        <div class="card-body">
-                            <h3 class="card-title">
-                                <a href="#" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Barang</a>
-                            </h3>
+                    </div>  
+                    <div class="card-header">
+                    <h3 class="text-left">                           
+                        <a href="/barang/form/" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Data</a>
+                    </h3>
+                    </div>
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
